@@ -27,23 +27,9 @@ nodemon>=3.0.1
 
 ## Setup Commands
 
-# 1. Backend Setup
-cd skillledger/backend
-npm install
-
-# 2. Frontend Setup  
-cd skillledger/frontend
-npm install
-
-# 3. Database
-# Install and start MongoDB locally, or use MongoDB Atlas cloud
-
-# 4. Environment Variables
-# Create .env file in backend folder:
-# MONGO_URI=mongodb://localhost:27017/skillledger
-# JWT_SECRET=your_secret_key_here
-# PORT=5000
-
-# 5. Run Application
-# Backend: npm run dev
-# Frontend: npm start
+# Run: cd skillledger/backend && npm install
+# Run: cd skillledger/frontend && npm install
+# Install MongoDB locally or use MongoDB Atlas
+# Create .env in backend with MONGO_URI, JWT_SECRET, PORT
+# Run backend: npm run dev
+# Run frontend: npm start
