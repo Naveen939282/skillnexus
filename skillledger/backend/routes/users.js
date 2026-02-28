@@ -117,4 +117,15 @@ router.get('/:id/credibility', auth, async (req, res) => {
   }
 });
 
+// Get current user scores
+router.get('/scores', auth, async (req, res) => {
+  try {
+    const scores = await Score.find({ user: req.user.id }).sort({ createdAt: -1 });
+    const current = scores.length > 0 ? scores[0].totalScore : 0;
+    res.json({ current, history: scores });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;

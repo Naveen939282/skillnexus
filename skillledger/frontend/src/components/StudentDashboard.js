@@ -31,11 +31,14 @@ const StudentDashboard = ({ user, token }) => {
     e.preventDefault();
     try {
       const config = { headers: { Authorization: `Bearer ${token}` } };
-      await axios.post('http://localhost:5000/api/skills/add', newSkill, config);
+      const response = await axios.post('http://localhost:5000/api/skills', newSkill, config);
+      console.log('Skill added:', response.data);
       fetchUserData();
       setNewSkill({ name: '', category: '', proficiencyLevel: 1 });
+      alert('Skill added successfully!');
     } catch (err) {
-      console.error(err);
+      console.error('Error adding skill:', err.response?.data || err.message);
+      alert(`Error: ${err.response?.data?.message || err.message}`);
     }
   };
 

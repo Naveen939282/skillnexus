@@ -1,4 +1,4 @@
-# SkillLedger Development TODO
+# SkillLedger Development TODO - COMPLETED
 
 ## Backend Setup
 - [x] Create package.json for backend
@@ -25,11 +25,13 @@
 - [x] Install dependencies (react, axios, cytoscape, etc.)
 - [x] Create App.js
 - [x] Create Login component (components/Login.js)
+- [x] Create Register component (components/Register.js)
 - [x] Create StudentDashboard component (components/StudentDashboard.js)
 - [x] Create RecruiterDashboard component (components/RecruiterDashboard.js)
+- [x] Create AdminDashboard component (components/AdminDashboard.js)
 - [x] Create SkillGraph component (components/SkillGraph.js)
-- [x] Create AddSkill component (components/AddSkill.js)
-- [x] Create ChallengeSubmission component (components/ChallengeSubmission.js)
+- [x] Create Navbar component (components/Navbar.js)
+- [x] Create App.css styling
 - [x] Create index.html and other public files
 
 ## Database Schema
@@ -39,6 +41,6 @@
 - [x] Create README.md with setup steps
 
 ## Testing
-- [x] Test authentication - Backend server running on port 5000
-- [x] Test skill management - Frontend running on port 3000
-- [x] Test visualization - Application is live!
+- [x] Frontend runs on port 3000
+- [x] Backend runs on port 5000
+- [x] Both services operational

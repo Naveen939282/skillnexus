@@ -35,6 +35,18 @@ router.post('/', auth, async (req, res) => {
   }
 });
 
+// Get user's all skills (alternative endpoint)
+router.get('/my-skills', auth, async (req, res) => {
+  try {
+    const skills = await Skill.find({ user: req.user.id })
+      .populate('relatedSkills.skill')
+      .sort({ createdAt: -1 });
+    res.json(skills);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 // Get user's all skills
 router.get('/', auth, async (req, res) => {
   try {
